@@ -50,21 +50,21 @@ After finishing this lesson, you are encouraged to read about the remaining thre
 
 ### State-Value Function - Policy Optimality:
 
-<img src="/home/roees/DRL course/typoraImages/Part1/policy optimality.png" style="zoom:20%" />
+<img src="typoraImages/Part1/policy optimality.png" style="zoom:20%" />
 
 ​	
 
-<img src="/home/roees/DRL course/typoraImages/Part1/action_value_function.png" style="zoom:20%" />
+<img src="typoraImages/Part1/action_value_function.png" style="zoom:20%" />
 
 
 
-<img src="/home/roees/DRL course/typoraImages/Part1/action_value_function2.png" style="zoom:20%" />
+<img src="typoraImages/Part1/action_value_function2.png" style="zoom:20%" />
 
 
 
 Action value function:
 
-<img src="/home/roees/DRL course/typoraImages/Part1/action_value_function3.png" style="zoom:50%" />
+<img src="typoraImages/Part1/action_value_function3.png" style="zoom:50%" />
 
 For a deterministic policy $\pi​$, holds:
 
@@ -78,7 +78,7 @@ $v_\pi(s) = q_\pi(s, \pi(s))$
 
 
 
-<img src="/home/roees/DRL course/typoraImages/Part1/summary_pic.png" style="zoom:80%" />
+<img src="typoraImages/Part1/summary_pic.png" style="zoom:80%" />
 
 State-value function for golf-playing agent (Sutton and Barto, 2017)
 
