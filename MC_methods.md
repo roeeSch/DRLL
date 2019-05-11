@@ -377,28 +377,18 @@ Here are some guiding principles that will help you to set the value of α* when
 
 ------
 
-- Algorithms that solve the **prediction problem** determine the value function v_\pi*v**π* (or q_\pi*q**π*) corresponding to a policy \pi*π*.
-
-- When working with finite MDPs, we can estimate the action-value function q_\pi*q**π* corresponding to a policy \pi*π* in a table known as a **Q-table**. This table has one row for each state and one column for each action. The entry in the s*s*-th row and a*a*-th column contains the agent's estimate for expected return that is likely to follow, if the agent starts in state s*s*, selects action a*a*, and then henceforth follows the policy \pi*π*.
-
-- Each occurrence of the state-action pair s,a*s*,*a* (s\in\mathcal{S},a\in\mathcal{A}*s*∈S,*a*∈A) in an episode is called a **visit to s,as,a**.
-
-- There are two types of MC prediction methods (for estimating
-
-   
-
-  q_\pi*q**π*
-
-  ):
-
-  - **First-visit MC** estimates q_\pi(s,a)*q**π*(*s*,*a*) as the average of the returns following *only first* visits to s,a*s*,*a*(that is, it ignores returns that are associated to later visits).
-  - **Every-visit MC** estimates q_\pi(s,a)*q**π*(*s*,*a*) as the average of the returns following *all* visits to s,a*s*,*a*.
+- Algorithms that solve the **prediction problem** determine the value function $v_\pi$ (or $q_\pi$) corresponding to a policy $\pi$.
+- When working with finite MDPs, we can estimate the action-value function q_\pi*q**π* corresponding to a policy \pi*π* in a table known as a **Q-table**. This table has one row for each state and one column for each action. The entry in the *s*-th row and *a*-th column contains the agent's estimate for expected return that is likely to follow, if the agent starts in state *s*, selects action *a*, and then henceforth follows the policy $\pi$.
+- Each occurrence of the state-action pair *s*,*a* ($s\in\mathcal{S},a\in\mathcal{A}$) in an episode is called a **visit to s,a**.
+- There are two types of MC prediction methods (for estimating $q_\pi$):
+  - **First-visit MC** estimates $q_\pi(s,a)$ as the average of the returns following *only first* visits to s,a*s*,*a*(that is, it ignores returns that are associated to later visits).
+  - **Every-visit MC** estimates $q_\pi(s,a)$ as the average of the returns following *all* visits to s,a*s*,*a*.
 
 ### Greedy Policies
 
 ------
 
-- A policy is **greedy** with respect to an action-value function estimate Q*Q* if for every state s\in\mathcal{S}*s*∈S, it is guaranteed to select an action a\in\mathcal{A}(s)*a*∈A(*s*) such that a = \arg\max_{a\in\mathcal{A}(s)}Q(s,a)*a*=argmax*a*∈A(*s*)*Q*(*s*,*a*). (It is common to refer to the selected action as the **greedy action**.)
+- A policy is **greedy** with respect to an action-value function estimate *Q* if for every state s*∈S, it is guaranteed to select an action *a*∈A(*s*) such that $a = \arg\max_{a\in\mathcal{A}(s)}Q(s,a)$. (It is common to refer to the selected action as the **greedy action**.)
 - In the case of a finite MDP, the action-value function estimate is represented in a Q-table. Then, to get the greedy action(s), for each row in the table, we need only select the action (or actions) corresponding to the column(s) that maximize the row.
 
 ### Epsilon-Greedy Policies
@@ -407,7 +397,7 @@ Here are some guiding principles that will help you to set the value of α* when
 
 - A policy is *ϵ*-greedy with respect to an action-value function estimate *Q* if for every state $s\in\mathcal{S}$,
   - with probability $1-\epsilon$, the agent selects the greedy action, and
-  - with probability \epsilon*ϵ*, the agent selects an action *uniformly* at random from the set of available (non-greedy **AND** greedy) actions.
+  - with probability *ϵ*, the agent selects an action *uniformly* at random from the set of available (non-greedy **AND** greedy) actions.
 
 ### MC Control
 
