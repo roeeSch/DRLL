@@ -52,3 +52,20 @@ Enables us to use existing algorithms with little or no modifications.
 
 the files are in git...
 
+def create_uniform_grid(low, high, bins=(10, 10)):
+    """Define a uniformly-spaced grid that can be used to discretize a space."""
+    return [np.linspace(low[0],high[0],bins[0])[1:-1],np.linspace(low[1],high[1],bins[1])[1:-1]]
+
+```
+def discretize(sample, grid):
+    """Discretize a sample as per given grid."""
+    return [np.digitize(sample[0], grid[0]), np.digitize(sample[1], grid[1])]
+```
+
+state_grid_new = create_uniform_grid(env.observation_space.low, env.observation_space.high, bins=(14, 14))
+
+```
+
+
+```
+
