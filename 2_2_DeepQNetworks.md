@@ -92,5 +92,21 @@ The following are true:
 - The target Q-Network's weights are updated less often (or more slowly) than the primary Q-Network.
 - Without fixed Q-targets, we would encounter a harmful form of correlation, whereby we shift the parameters of the network based on a constantly moving target.
 
+
+
+## Deep Q-Learning Algorithm
+
 Its recommended to read the [research paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) that introduces the Deep Q-Learning algorithm.
+
+Tips for reading papers: [tips](https://violentmetaphors.com/2013/08/25/how-to-read-and-understand-a-scientific-paper-2/)
+
+![1558612231711](/home/roees/DRL course/typoraImages/Part2/QDL_alg.png)
+
+The paper pseudo code:
+
+![1558614213015](/home/roees/DRL course/typoraImages/Part2/DQL_alg_atari.png)
+
+
+
+**Coding Exercise:** Lunar Lander (gym)
 
