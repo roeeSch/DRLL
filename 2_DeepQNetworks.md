@@ -130,3 +130,121 @@ Deep Q-Learning samples experience transitions *uniformly* from a replay memory.
 <img src='typoraImages/Part2/dueling-q-network.png' style="zoom:40%">
 
 Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values *for each action*. However, by replacing the traditional Deep Q-Network (DQN) architecture with a [dueling architecture](https://arxiv.org/abs/1511.06581), we can assess the value of each state, without having to learn the effect of each action.
+
+
+
+### Double DQN
+
+![1558775128791](/home/roees/DRL course/typoraImages/Part2/Double_DQN.png)
+
+This argmax at the beginning of the learning process selects the maximum based on noise and leads to over estimation of Q-values. 
+
+The original suggested solution is maintaining 2 q functions, at each iteration randomly pick one of them for selecting action (using argmax) and with the other evaluate the s-a:
+
+![1558775448860](/home/roees/DRL course/typoraImages/Part2/Double_DQN_2.png)
+
+With fixed Q-targets (as described above) the $Q$ and $Q^{-}$ weights are separated enough to solve this problem as well.
+
+ 
+
+#### Notes
+
+You can read more about Double DQN (DDQN) by perusing this [research paper](https://arxiv.org/abs/1509.06461).
+
+If you'd like to dig deeper into how Deep Q-Learning overestimates action values, please read this [research paper](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf).
+
+
+
+### Prioritized Experience Replay
+
+<img src='typoraImages/Part2/PrioritizedExperienceReplay.png' style='zoom:80%'>
+
+This method changes the probability of choosing a experience tuple from random distribution to $\delta$ based distribution. $\delta$ - the TD error. When a tuple is picked, then we would update its TD error with new estimate of $q$. The method reduces the number of batch updates needed in order to learn a value function.  
+
+Some improvements include:
+
+1. if we by chance had a small TD error, the tuple will not be chosen. Solution add $e$.
+2. It might happen that a subset of experience tuples would be "greedily" chosen and therefore over fit. Solution add $a$. $a=1\rightarrow priorities$ and $a=0\rightarrow random$.
+
+<img src = 'typoraImages/Part2/PrioritizedExperienceReplay2.png' style='zoom:80%'>
+
+Since the update rule assumes expected value from all experience the update rule needs to be modified to take into account the probability of selecting experiences. Hence the modified update rule.
+
+$b$ - another hyper-parameter that should increase towards 1 when reaching the end of optimization since $q$ has almost converged and that is the time to emphasize the more important experience.
+
+ 
+
+#### Notes
+
+You can read more about prioritized experience replay by perusing this [research paper](https://arxiv.org/abs/1511.05952).
+
+
+
+## Dueling DQN
+
+![1558807956905](/home/roees/DRL course/typoraImages/Part2/DuelingDQN.png)
+
+Sine values of most states don't vary across actions this approach branches after the conv-nets into two braches:
+
+1. Estimating the value function
+2. Estimating the advantage-values function
+
+This technique resulted in significantly outperforming vanilla-dqns.
+
+#### Notes
+
+You can read more about Dueling DQN by perusing this [research paper](https://arxiv.org/abs/1511.06581) (or 
+[here]: typoraImages/Part2/DuelingNetworkArchForDRL.pdf	"Dueling DRL Arch"
+
+). 
+
+
+
+<img src='typoraImages/Part2/rainbow.jpg' style='zoom:10%'>
+
+## Rainbow
+
+
+
+So far, you've learned about three extensions to the Deep Q-Networks (DQN) algorithm:
+
+- Double DQN (DDQN)
+- Prioritized experience replay
+- Dueling DQN
+
+But these aren't the only extensions to the DQN algorithm! Many more extensions have been proposed, including:
+
+- Learning from [multi-step bootstrap targets](https://arxiv.org/abs/1602.01783) (as in A3C - *you'll learn about this in the next part of the nanodegree*)
+- [Distributional DQN](https://arxiv.org/abs/1707.06887)
+- [Noisy DQN](https://arxiv.org/abs/1706.10295)
+
+Each of the six extensions address a **different** issue with the original DQN algorithm.
+
+Researchers at Google DeepMind recently tested the performance of an agent that incorporated all six of these modifications. The corresponding algorithm was termed [Rainbow](https://arxiv.org/abs/1710.02298).
+
+It outperforms each of the individual modifications and achieves state-of-the-art performance on Atari 2600 games!
+
+<img src='typoraImages/Part2/rainbowCompared.png' style='zoom:40%'>
+
+## In Practice
+
+------
+
+In mid-2018, OpenAI held [a contest](https://contest.openai.com/), where participants were tasked to create an algorithm that could learn to play the [Sonic the Hedgehog](https://en.wikipedia.org/wiki/Sonic_the_Hedgehog) game. The participants were tasked to train their RL algorithms on provided game levels; then, the trained agents were ranked according to their performance on previously unseen levels.
+
+Thus, the contest was designed to assess the ability of trained RL agents to generalize to new tasks.
+
+<img src='typoraImages/Part2/sonic.gif' style='zoom:60%'>
+
+One of the provided baseline algorithms was **Rainbow DQN**. If you'd like to play with this dataset and run the baseline algorithms, you're encouraged to follow the [setup instructions](https://contest.openai.com/2018-1/details/).
+
+**Baseline results on the Retro Contest:**
+
+<img src='/home/roees/DRL course/typoraImages/Part2/rainbow2.jpg' style='zoom:40%'>
+
+
+
+
+
+
+
