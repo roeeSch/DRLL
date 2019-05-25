@@ -110,3 +110,23 @@ The paper pseudo code:
 
 **Coding Exercise:** Lunar Lander (gym)
 
+
+
+## Deep Q-Learning Improvements
+
+Several improvements to the original Deep Q-Learning algorithm have been suggested. Three of the more prominent ones.
+
+#### Double DQN
+
+Deep Q-Learning [tends to overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) action values. [Double Q-Learning](https://arxiv.org/abs/1509.06461) has been shown to work well in practice to help with this.
+
+#### Prioritized Experience Replay
+
+
+Deep Q-Learning samples experience transitions *uniformly* from a replay memory. [Prioritized experienced replay](https://arxiv.org/abs/1511.05952) is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability.
+
+#### Dueling DQN
+
+<img src='typoraImages/Part2/dueling-q-network.png' style="zoom:40%">
+
+Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values *for each action*. However, by replacing the traditional Deep Q-Network (DQN) architecture with a [dueling architecture](https://arxiv.org/abs/1511.06581), we can assess the value of each state, without having to learn the effect of each action.
