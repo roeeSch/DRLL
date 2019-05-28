@@ -27,6 +27,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+C:\Users\ROEE\GitProjects\DRLL\drlnd\p1_navigation\Banana_Windows_x86\*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -102,3 +103,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+drlnd/p1_navigation/Banana_Windows_x86/
+drlnd/envP/
+drlnd/.idea/
+drlnd/gym/
