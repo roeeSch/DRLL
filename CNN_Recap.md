@@ -6,7 +6,7 @@ First, let's take a look at a complete CNN architecture; below is a network call
 
 **VGG-16:**
 
-![img](/home/roees/DRL course/typoraImages/CNN_recap/vgg-16.png)
+![img](typoraImages/CNN_recap/vgg-16.png)
 
 ## Convolutional Layer
 
@@ -25,7 +25,7 @@ You may also note that the diagram reads "convolution + ReLu," and the **ReLu** 
 
 method:
 
-![1558620764414](/home/roees/DRL course/typoraImages/CNN_recap/CNN_recap_1.png)
+![1558620764414](typoraImages/CNN_recap/CNN_recap_1.png)
 
 Note: the filter is as deep as the input layer. Its common to use 10-100's of these filters in a single layer of the cnn.  Each filter corresponds to a specific pattern. A conv layer which is applied on a conv layer is said to look for patterns of patterns (and so on).
 
@@ -133,11 +133,11 @@ After a couple of convolutional layers (+ReLu's), in the VGG-16 network, you'll 
 - **Maxpooling** layers look at areas in an input image (like the 4x4 pixel area pictured below) and choose to keep the maximum pixel value in that area, in a new, reduced-size area.
 - Maxpooling is the most common type of pooling layer in CNN's, but there are also other types such as average pooling.
 
-![img](/home/roees/DRL course/typoraImages/CNN_recap/CNN_pooling.png)
+![img](typoraImages/CNN_recap/CNN_pooling.png)
 
 Global Average Pooling is reducing the whole 4x4 to 1x1:
 
-![1558622230036](/home/roees/DRL course/typoraImages/CNN_recap/CNN_pooling2.png)
+![1558622230036](typoraImages/CNN_recap/CNN_pooling2.png)
 
 
 
@@ -167,7 +167,7 @@ As an example, below is a t-SNE reduction done on the MNIST dataset, which is a 
 
 The 28x28 pixel space of each digit is compressed to 2 dimensions by t-SNE and you can see that this produces ten clusters, one for each type of digits in the dataset!
 
-![img](/home/roees/DRL course/typoraImages/CNN_recap/t-sne-mnist.png)
+![img](typoraImages/CNN_recap/t-sne-mnist.png)
 
 ### t-SNE and practice with neural networks
 
@@ -195,9 +195,7 @@ The process for an occlusion experiment is as follows:
 
 The result should be a heatmap that shows the predicted class of an image as a function of which part of an image was occluded. The reasoning is that **if the class score for a partially occluded image is different than the true class, then the occluded area was likely very important**!
 
-
-
-![img](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5adf872b_screen-shot-2018-04-24-at-12.35.07-pm/screen-shot-2018-04-24-at-12.35.07-pm.png)
+![img](typoraImages/CNN_recap/Occlusion.png)
 
 Occlusion experiment with an image of an elephant.
 
@@ -219,7 +217,7 @@ Looking at the saliency map below, you can see that it identifies the most impor
 
 
 
-![img](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5adf89f5_screen-shot-2018-04-24-at-12.47.51-pm/screen-shot-2018-04-24-at-12.47.51-pm.png)
+![img](typoraImages/CNN_recap/GraphBased.png)
 
 Graph-based saliency map for a flower; the most salient (important) pixels have been identified as the flower-center and petals.
 
@@ -235,7 +233,7 @@ This is very similar to the backpropagation steps for measuring the error betwee
 
 
 
-![img](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5adf8c6c_screen-shot-2018-04-24-at-12.58.16-pm/screen-shot-2018-04-24-at-12.58.16-pm.png)
+![img](typoraImages/CNN_recap//screen-shot-2018-04-24-at-12.58.16-pm.png)
 
 
 

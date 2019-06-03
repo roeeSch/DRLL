@@ -2,7 +2,7 @@
 
 
 
-As you'll learn in this lesson, the Deep Q-Learning algorithm represents the optimal action-value function $q_*​$ as a neural network (instead of a table).
+As you'll learn in this lesson, the Deep Q-Learning algorithm represents the optimal action-value function $q_*$ as a neural network (instead of a table).
 
 Unfortunately, reinforcement learning is [notoriously unstable](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.73.3097&rep=rep1&type=pdf) when neural networks are used to represent the action values. In this lesson, you'll learn all about the Deep Q-Learning algorithm, which addressed these instabilities by using **two key features**:
 
@@ -22,15 +22,15 @@ Unfortunately, reinforcement learning is [notoriously unstable](http://citeseerx
 
 Atari Games:
 
-![1558263554747](/home/roees/DRL course/typoraImages/Part2/atari_intro.png)
+![1558263554747](typoraImages/Part2/atari_intro.png)
 
 The Q-value approximation network produces q values for all actions.
 
-![1558263781588](/home/roees/DRL course/typoraImages/Part2/atari_intro2.png)
+![1558263781588](typoraImages/Part2/atari_intro2.png)
 
 
 
-####  DeepMind leveraged a **Deep Q-Network (DQN)** to build the Deep Q-Learning algorithm that learned to play many Atari video games better than humans
+#### DeepMind leveraged a **Deep Q-Network (DQN)** to build the Deep Q-Learning algorithm that learned to play many Atari video games better than humans
 
 - The DQN takes the state as input, and returns the corresponding predicted action values for each possible game action.
 - For each atari game, the DQN was trained from scratch
@@ -39,7 +39,7 @@ The Q-value approximation network produces q values for all actions.
 
 ## Experience Replay (coping with correlation type 1)
 
-![1558264321374](/home/roees/DRL course/typoraImages/Part2/ValFun_ExperienceReplay_1.png)
+![1558264321374](typoraImages/Part2/ValFun_ExperienceReplay_1.png)
 
 
 
@@ -47,7 +47,7 @@ Saving tuples of SARS and going over it better usage of experience.
 
 The reason that these tuples are sampled is to deal with the problem that temporally close SA can be correlated which creates oscillations and divergence (?). Randomly sampling the history helps deal with this problem.
 
-![1558264983647](/home/roees/DRL course/typoraImages/Part2/ValFun_ExperienceReplay_2.png)
+![1558264983647](typoraImages/Part2/ValFun_ExperienceReplay_2.png)
 
 
 
@@ -62,13 +62,13 @@ Experience replay:
 
 The gradient descent update rule:
 
-![1558265329798](/home/roees/DRL course/typoraImages/Part2/ValFun_FixedQTargets_1.png)
+![1558265329798](typoraImages/Part2/ValFun_FixedQTargets_1.png)
 
 
 
 This update rule is like chasing a moving target. Hence the following solution:
 
-![1558265544673](/home/roees/DRL course/typoraImages/Part2/ValFun_FixedQTargets_2.png)
+![1558265544673](typoraImages/Part2/ValFun_FixedQTargets_2.png)
 
 We freeze $w$ by saving its latest value into $w^-$ learn for a few steps and so on. This decouples the target from the parameters. Makes the algorithm much more stable and less likely to diverge or fall into oscillations.
 
@@ -78,7 +78,7 @@ We freeze $w$ by saving its latest value into $w^-$ learn for a few steps and so
 
 In Q-Learning, we **update a guess with a guess**, and this can potentially lead to harmful correlations. To avoid this, we can update the parameters *w* in the network $\hat{q}$ to better approximate the action value corresponding to state *S* and action *A* with the following update rule:
 
-![1558266052594](/home/roees/DRL course/typoraImages/Part2/ValFun_FixedQTargets_3.png)
+![1558266052594](typoraImages/Part2/ValFun_FixedQTargets_3.png)
 
 where w^-*w*− are the weights of a separate target network that are not changed during the learning step, and (*S*, *A*, *R*, *S*′) is an experience tuple.
 
@@ -100,11 +100,11 @@ Its recommended to read the [research paper](https://storage.googleapis.com/deep
 
 Tips for reading papers: [tips](https://violentmetaphors.com/2013/08/25/how-to-read-and-understand-a-scientific-paper-2/)
 
-![1558612231711](/home/roees/DRL course/typoraImages/Part2/QDL_alg.png)
+![1558612231711](typoraImages/Part2/QDL_alg.png)
 
 The paper pseudo code:
 
-![1558614213015](/home/roees/DRL course/typoraImages/Part2/DQL_alg_atari.png)
+![1558614213015](typoraImages/Part2/DQL_alg_atari.png)
 
 
 
@@ -122,7 +122,6 @@ Deep Q-Learning [tends to overestimate](https://www.ri.cmu.edu/pub_files/pub1/th
 
 #### Prioritized Experience Replay
 
-
 Deep Q-Learning samples experience transitions *uniformly* from a replay memory. [Prioritized experienced replay](https://arxiv.org/abs/1511.05952) is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability.
 
 #### Dueling DQN
@@ -135,13 +134,13 @@ Currently, in order to determine which states are (or are not) valuable, we have
 
 ### Double DQN
 
-![1558775128791](/home/roees/DRL course/typoraImages/Part2/Double_DQN.png)
+![1558775128791](typoraImages/Part2/Double_DQN.png)
 
 This argmax at the beginning of the learning process selects the maximum based on noise and leads to over estimation of Q-values. 
 
 The original suggested solution is maintaining 2 q functions, at each iteration randomly pick one of them for selecting action (using argmax) and with the other evaluate the s-a:
 
-![1558775448860](/home/roees/DRL course/typoraImages/Part2/Double_DQN_2.png)
+![1558775448860](typoraImages/Part2/Double_DQN_2.png)
 
 With fixed Q-targets (as described above) the $Q$ and $Q^{-}$ weights are separated enough to solve this problem as well.
 
@@ -182,9 +181,9 @@ You can read more about prioritized experience replay by perusing this [research
 
 ## Dueling DQN
 
-![1558807956905](/home/roees/DRL course/typoraImages/Part2/DuelingDQN.png)
+![1558807956905](typoraImages/Part2/DuelingDQN.png)
 
-Sine values of most states don't vary across actions this approach branches after the conv-nets into two braches:
+Since values of most states don't vary across actions this approach branches after the conv-nets into two braches:
 
 1. Estimating the value function
 2. Estimating the advantage-values function
@@ -194,6 +193,7 @@ This technique resulted in significantly outperforming vanilla-dqns.
 #### Notes
 
 You can read more about Dueling DQN by perusing this [research paper](https://arxiv.org/abs/1511.06581) (or 
+
 [here]: typoraImages/Part2/DuelingNetworkArchForDRL.pdf	"Dueling DRL Arch"
 
 ). 
@@ -240,7 +240,7 @@ One of the provided baseline algorithms was **Rainbow DQN**. If you'd like to pl
 
 **Baseline results on the Retro Contest:**
 
-<img src='/home/roees/DRL course/typoraImages/Part2/rainbow2.jpg' style='zoom:40%'>
+<img src='typoraImages/Part2/rainbow2.jpg' style='zoom:40%'>
 
 
 
