@@ -109,3 +109,5 @@ drlnd/envP/
 drlnd/.idea/
 drlnd/gym/
 drlnd/p1_navigation/Banana_Linux/
+udacityDRL/deep-reinforcement-learning1/p2_continuous-control/ddpgPendulum/
+udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/
