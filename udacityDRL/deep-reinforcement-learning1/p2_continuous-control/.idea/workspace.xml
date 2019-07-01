@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ae9af6-bde5-4877-ae27-a15a5e2c9911" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Continuous_Control.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Continuous_Control.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddpgPendulum/ddpg_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/ddpgPendulum/ddpg_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/p2_continuous-control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p2_continuous-control.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Continuous_Control.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddpgPendulum/DDPG.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ddpgPendulum/DDPG.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddpgPendulum/checkpoint_actor.pth" beforeDir="false" afterPath="$PROJECT_DIR$/ddpgPendulum/checkpoint_actor.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddpgPendulum/checkpoint_critic.pth" beforeDir="false" afterPath="$PROJECT_DIR$/ddpgPendulum/checkpoint_critic.pth" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpg_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="266">
               <caret line="14" column="78" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="78" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -26,14 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpg_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="45" column="101" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="101" />
+            <state relative-caret-position="139">
+              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Continuous_Control_PPO.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="17" />
             </state>
           </provider>
         </entry>
@@ -48,6 +60,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Continuous_Control_PPO.ipynb" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="64" />
     <option name="y" value="-11" />
@@ -60,7 +79,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -68,14 +86,27 @@
               <item name="p2_continuous-control" type="b2602c69:ProjectViewProjectNode" />
               <item name="p2_continuous-control" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="p2_continuous-control" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2_continuous-control" type="462c0819:PsiDirectoryNode" />
+              <item name="ddpgPendulum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2_continuous-control" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2_continuous-control" type="462c0819:PsiDirectoryNode" />
+              <item name="PPO_pong" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ddpgPendulum/ddpg_model.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/ddpgPendulum/ddpg_model.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -110,12 +141,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -124,16 +156,29 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32846716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ddpgPendulum/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ddpgPendulum/ddpg_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ddpg_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="266">
           <caret line="14" column="78" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="78" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -143,11 +188,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ddpg_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="45" column="101" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="101" />
+        <state relative-caret-position="139">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO_pong/pong-PPO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1824" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ppo_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO_pong/pong-PPO.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO_pong/parallelEnv.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Continuous_Control_PPO.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="17" />
         </state>
       </provider>
     </entry>
