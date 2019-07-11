@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e7038d1-dbdb-4623-b2a2-8ee61afec900" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/p2_continuous-control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/p2_continuous-control.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Continuous_Control_ddpg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Continuous_Control_ddpg.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher.x86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher.x86_64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/Assembly-CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/Google.Protobuf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/Grpc.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/Mono.Posix.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.Interactive.Async.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ARModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ARModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AccessibilityModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AccessibilityModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AnimationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AnimationModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AssetBundleModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.AudioModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClothModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClothModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClusterInputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClusterInputModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClusterRendererModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ClusterRendererModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.CoreModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.CoreModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.CrashReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.CrashReportingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.DirectorModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.DirectorModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.GameCenterModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.GameCenterModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.GridModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.GridModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.IMGUIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.IMGUIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ImageConversionModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ImageConversionModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.InputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.InputModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.JSONSerializeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.JSONSerializeModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.Networking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ParticleSystemModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ParticleSystemModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ParticlesLegacyModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ParticlesLegacyModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.PerformanceReportingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.Physics2DModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.Physics2DModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.PhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.PhysicsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.ScreenCaptureModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SharedInternalsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SharedInternalsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SpriteMaskModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SpriteMaskModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SpriteShapeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.SpriteShapeModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.StandardEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.StyleSheetsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.StyleSheetsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TerrainModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TerrainPhysicsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TextRenderingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TextRenderingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TilemapModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.TilemapModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UIElementsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UNETModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UNETModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityAnalyticsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityConnectModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityConnectModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VRModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VehiclesModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VehiclesModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VideoModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.VideoModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.WebModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.WebModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.WindModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.WindModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/UnityEngine.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Managed/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Resources/UnityPlayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Resources/unity default resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/Resources/unity_builtin_extra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/boot.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/globalgamemanagers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/globalgamemanagers.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/level0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/level0.resS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/resources.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/Reacher_Data/sharedassets0.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Untitled.ipynb" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c-ppo/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3325">
+              <caret line="197" column="52" selection-start-line="197" selection-start-column="52" selection-end-line="197" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/storage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/algo/ppo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="601">
+              <caret line="68" column="38" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../udacityDRL/pong/pong_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../udacityDRL/pong/pong-PPO.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4256">
+              <caret line="224" column="81" selection-start-line="224" selection-start-column="61" selection-end-line="224" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1368">
+              <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/distributions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1254">
+              <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wrap</find>
+      <find>make_env</find>
+      <find>rollouts</find>
+      <find>obs_shape</find>
+      <find>action_shape</find>
+      <find>obs</find>
+      <find>episode_rewards</find>
+      <find>masks</find>
+      <find>value_pre</find>
+      <find>reward</find>
+      <find>value_preds</find>
+      <find>action_log_prob</find>
+      <find>after</find>
+      <find>action_loss</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/model.py" />
+        <option value="$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/envs.py" />
+        <option value="$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/algo/ppo.py" />
+        <option value="$PROJECT_DIR$/Resource" />
+        <option value="$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/storage.py" />
+        <option value="$PROJECT_DIR$/a2c-ppo/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="testDRLs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testDRLs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testDRLs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testDRLs" type="462c0819:PsiDirectoryNode" />
+              <item name="a2c-ppo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testDRLs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testDRLs" type="462c0819:PsiDirectoryNode" />
+              <item name="a2c-ppo" type="462c0819:PsiDirectoryNode" />
+              <item name="a2c_ppo_acktr" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../udacityDRL/pong/pong-PPO.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="testDRLs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/a2c-ppo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a2c-ppo/main.py" />
+      <option name="PARAMETERS" value="--env-name &quot;Reacher-v2&quot; --algo ppo --use-gae --log-interval 1 --num-steps 1000 --num-processes 1 --lr 3e-4 --entropy-coef 0 --value-loss-coef 0.5 --ppo-epoch 10 --num-mini-batch 32 --gamma 0.99 --gae-lambda 0.95 --num-env-steps 1000000 --use-linear-lr-decay --use-proper-time-limits" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e7038d1-dbdb-4623-b2a2-8ee61afec900" name="Default Changelist" comment="" />
+      <created>1562327545860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562327545860</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17659353" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26959246" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.12330198" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <condition expression="rwrd_tmp[0]&gt;0" language="Python" />
+          <url>file://$PROJECT_DIR$/a2c-ppo/main.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/a2c-ppo/main.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/a2c-ppo/main.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>rwrd_tmp[0]&gt;0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rwrd_tmp[0]&gt;0 and step&gt;2000</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rwrd_tmp&gt;0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/drlnd/lib/python3.6/site-packages/communicator_objects/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/drlnd/lib/python3.6/site-packages/google/protobuf/descriptor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="877" selection-start-line="877" selection-end-line="877" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/arguments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2583">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/baselines/baselines/common/vec_env/shmem_vec_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/drlnd/lib/python3.6/site-packages/unityagents/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/envs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resource">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/algo/a2c_acktr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2711">
+          <caret line="1734" selection-start-line="1734" selection-end-line="1734" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../udacityDRL/pong/pong-REINFORCE.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/drlnd/lib/python3.6/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="510" selection-start-line="510" selection-end-line="510" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3325">
+          <caret line="197" column="52" selection-start-line="197" selection-start-column="52" selection-end-line="197" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../udacityDRL/pong/pong-PPO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4256">
+          <caret line="224" column="81" selection-start-line="224" selection-start-column="61" selection-end-line="224" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/distributions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../udacityDRL/pong/pong_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c-ppo/a2c_ppo_acktr/algo/ppo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="68" column="38" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

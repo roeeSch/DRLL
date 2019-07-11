@@ -1,0 +1,5 @@
+This is from:
+https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
+
+depends on:
+https://github.com/openai/baselines
