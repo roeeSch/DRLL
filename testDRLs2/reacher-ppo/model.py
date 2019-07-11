@@ -1,9 +1,6 @@
-import numpy as np
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
 
 
 class FullyConnectedNetwork(nn.Module):
@@ -43,9 +40,10 @@ class PPOPolicyNetwork(nn.Module):
         a = self.actor_body(obs)
         v = self.critic_body(obs)
         
-        dist = torch.distributions.Normal(a, self.std)
+        dist = torch.distributions.Normal(a, F.softplus(self.std))
         if action is None:
             action = dist.sample()
         log_prob = dist.log_prob(action)
         log_prob = torch.sum(log_prob, dim=1, keepdim=True)
-        return action, log_prob, torch.Tensor(np.zeros((log_prob.size(0), 1))), v
+
+            return action, log_prob, dist.entropy().sum(-1).unsqueeze(-1), v

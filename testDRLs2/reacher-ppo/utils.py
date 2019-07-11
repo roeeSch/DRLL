@@ -16,7 +16,7 @@ class Dataset(tData.Dataset):
         return self.indxs[index]
 
 
-class myBatcher:
+class miniBatcher:
     def __init__(self,  dataLength, batch_size=32, shuffle=True, num_workers=1):
 
         params = {'batch_size': batch_size,

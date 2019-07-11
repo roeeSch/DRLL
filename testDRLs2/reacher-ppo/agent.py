@@ -4,14 +4,13 @@
 # declaration at the top                                              #
 #######################################################################
 
-# Modified by Jeremi Kaczmarczyk (jeremi.kaczmarczyk@gmail.com) 2018 
-# For Udacity Deep Reinforcement Learning Nanodegree
+# Modified by Roee Schmidt (Jul 2019) for Udacity DRL project #2 in continuous control
 
 import numpy as np
 import torch
 import torch.nn as nn
 
-from utils import myBatcher as mB
+from utils import miniBatcher as mB
 
 class PPOAgent(object):
     
@@ -96,10 +95,17 @@ class PPOAgent(object):
         advantages = (advantages - advantages.mean()) / advantages.std()
 
         ########################################################################################
-        # Go aver all processed_rollout in minibatches while optimizing the networks for minimum loss
+        # Go aver all processed_rollout in minibatches while optimizing the networks for minimum loss:
+        # 1. Split all experience (processed_rollout) into 'mini_batch_number' minibatches.
+        # 2. Use actor-critic network and (states, actions) to obtain (log_probs, entropy_loss, values)
+        # 3. Calculate action probability ratio (and clipped ratio) using log_probs and previous log_probs.
+        # 4. Calculate objective be multiplying ratio with advantages and multiplying by -1 (for minimization).
+        # 5. Policy_Loss is basically the average of advantages * ratio
+        # 6. Value_Loss is the average squared error between values and discounted returns.
+        # 7. Optimization step towards reducing (policy_loss + value_loss)
         batch_size = states.size(0) // hyperparameters['mini_batch_number']
-        myBtchr = mB(dataLength=states.size(0), batch_size=batch_size, shuffle=True, num_workers=1)
-        for batch_indices in myBtchr.generator:
+        mBtchr = mB(dataLength=states.size(0), batch_size=batch_size, shuffle=True, num_workers=1)
+        for batch_indices in mBtchr.generator:
             batch_indices.tolist()
             sampled_states = states[batch_indices]
             sampled_actions = actions[batch_indices]
