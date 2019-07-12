@@ -16,41 +16,30 @@ from IPython.display import clear_output
 from model import PPOPolicyNetwork
 from agent import PPOAgent
 
-## Create Unity environment
-env = UnityEnvironment(file_name="Reacher_Linux_multAgents/Reacher.x86_64")
-# env = UnityEnvironment(file_name="Reacher_Linux_1agent/Reacher.x86_64")
-brain_name = env.brain_names[0]
-brain = env.brains[brain_name]
-env_info = env.reset(train_mode=True)[brain_name]
 
-# Set configurations:
-config = {
-    'environment': {
-        'state_size':  env_info.vector_observations.shape[1],
-        'action_size': brain.vector_action_space_size,
-        'number_of_agents': len(env_info.agents)
-    },
-    'pytorch': {
-        'device': torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    },
-    'hyperparameters': {
-        'discount_rate': 0.99,
-        'tau': 0.95,
-        'gradient_clip': 5,
-        'rollout_length': 2048,
-        'optimization_epochs': 10,
-        'ppo_clip': 0.2,
-        'log_interval': 2048,
-        'max_steps': 1e5,
-        'mini_batch_number': 32,
-        'entropy_coefficent': 0.01,
-        'episode_count': 250*6,
-        'hidden_size': 512,
-        'adam_learning_rate': 3e-4,
-        'adam_epsilon': 1e-5
+def initializeEnv():
+    ## Create Unity environment
+    env = UnityEnvironment(file_name="Reacher_Linux_multAgents/Reacher.x86_64")
+    # env = UnityEnvironment(file_name="Reacher_Linux_1agent/Reacher.x86_64")
+    brain_name = env.brain_names[0]
+    brain = env.brains[brain_name]
+    env_info = env.reset(train_mode=True)[brain_name]
+
+    # Set configurations:
+    config = {
+        'environment': {
+            'state_size':  env_info.vector_observations.shape[1],
+            'action_size': brain.vector_action_space_size,
+            'number_of_agents': len(env_info.agents)
+        }
     }
-}
 
+    return env, brain, brain_name, config
+
+def merge_cnfg(config_trgt, config_ref=None):
+    for key in config_ref.keys():
+        config_trgt[key] = config_ref[key]
+    return config_trgt
 
 def play_round(env, brain_name, policy, config, train=True):
     env_info = env.reset(train_mode=train)[brain_name]
@@ -111,16 +100,51 @@ def arg_parse():
                         dest='pltLrn')
     parser.add_argument('--playRound', help='play round of last learned policy', action='store_true', default=True,
                         dest='playRound')
+    parser.add_argument('--numEpisodes', help='number of episodes for this session (default = 100)', action='store', default=100,
+                        dest='numEpisodes', type=int)
 
-    return parser.parse_args()
+    args = parser.parse_args()
 
-if __name__=='__main__':
+    # Set configurations:
+    config = {
+        'pytorch': {
+            'device': torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        },
+        'hyperparameters': {
+            'discount_rate': 0.99,
+            'tau': 0.95,
+            'gradient_clip': 5,
+            'rollout_length': 2048,
+            # 'optimization_epochs': 10,
+            'ppo_clip': 0.2,
+            'log_interval': 2048,
+            'max_steps': 1e5,
+            'mini_batch_number': 32,
+            'entropy_coefficent': 0.01,
+            'episode_count': 100,
+            'hidden_size': 512,
+            'adam_learning_rate': 3e-4,
+            'adam_epsilon': 1e-5
+        }
+    }
 
-    args = arg_parse()
+    if args.numEpisodes is not None:
+        config['hyperparameters']['episode_count'] = args.numEpisodes
+
+
+    return args, config
+
+
+if __name__ == '__main__':
+
+
+
+    args, config = arg_parse()
 
     if args.learnNewPolicy:
+        env, brain, brain_name, config_env = initializeEnv()
+        config = merge_cnfg(config, config_env)
         print("Learning new policy...")
-        config['hyperparameters']['episode_count'] = 300
         new_policy = PPOPolicyNetwork(config)
         all_scores, average_scores = ppo(env, brain_name, new_policy, config, train=True)
 
@@ -136,6 +160,7 @@ if __name__=='__main__':
         plt.xlabel('episode')
         plt.savefig('learning_rates.png')
         plt.show()
+        env.close()
 
     if args.pltLrn:
         with open('results.pckl', 'rb') as fid:
@@ -148,9 +173,12 @@ if __name__=='__main__':
         plt.show()
 
     if args.playRound:
+        env, brain, brain_name, config_env = initializeEnv()
+        config = merge_cnfg(config, config_env)
         policy = PPOPolicyNetwork(config)
         policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-512_score38.pth'))
         _, _ = ppo(env, brain_name, policy, config, train=False)
+        env.close()
 
     # if False:
     #     policy = PPOPolicyNetwork(config)

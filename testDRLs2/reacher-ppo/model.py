@@ -28,15 +28,15 @@ class PPOPolicyNetwork(nn.Module):
         state_size = config['environment']['state_size']
         action_size = config['environment']['action_size']
         hidden_size = config['hyperparameters']['hidden_size']
-        device = config['pytorch']['device']
+        self.device = config['pytorch']['device']
 
         self.actor_body = FullyConnectedNetwork(state_size, action_size, hidden_size, F.tanh)
         self.critic_body = FullyConnectedNetwork(state_size, 1, hidden_size)  
         self.std = nn.Parameter(torch.ones(1, action_size))
-        self.to(device)
+        self.to(self.device)
 
     def forward(self, obs, action=None):
-        obs = torch.Tensor(obs)
+        obs = torch.Tensor(obs).to(self.device)
         a = self.actor_body(obs)
         v = self.critic_body(obs)
         
@@ -46,4 +46,4 @@ class PPOPolicyNetwork(nn.Module):
         log_prob = dist.log_prob(action)
         log_prob = torch.sum(log_prob, dim=1, keepdim=True)
 
-            return action, log_prob, dist.entropy().sum(-1).unsqueeze(-1), v
+        return action, log_prob, dist.entropy().sum(-1).unsqueeze(-1), v
