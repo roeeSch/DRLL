@@ -1,6 +1,7 @@
 # Reacher - PPO
 # Import packages
 
+import time
 import argparse
 import pickle
 from scipy import signal
@@ -96,12 +97,14 @@ def arg_parse():
     parser = argparse.ArgumentParser(description='Args for Reacher - PPO')
     parser.add_argument('--learn', help='learn new policy', action='store_true', default=False,
                         dest='learnNewPolicy')
-    parser.add_argument('--pltLrn', help='plot progress of previous learning session', action='store_true', default=False,
-                        dest='pltLrn')
-    parser.add_argument('--playRound', help='play round of last learned policy', action='store_true', default=True,
-                        dest='playRound')
-    parser.add_argument('--numEpisodes', help='number of episodes for this session (default = 100)', action='store', default=100,
-                        dest='numEpisodes', type=int)
+    parser.add_argument('--pltLrn', help='plot progress of previous learning session', action='store_true',
+                        default=False, dest='pltLrn')
+    parser.add_argument('--playRound', help='play round of last learned policy', action='store_true',
+                        default=False, dest='playRound')
+    parser.add_argument('--numEpisodes', help='number of episodes for this session (default = 100)', action='store',
+                        default=150, dest='numEpisodes', type=int)
+
+    parser.add_argument('--gridSrchHidden', nargs='+', type=int, default=[])
 
     args = parser.parse_args()
 
@@ -142,9 +145,9 @@ if __name__ == '__main__':
     args, config = arg_parse()
 
     if args.learnNewPolicy:
+        print("Learning new policy...")
         env, brain, brain_name, config_env = initializeEnv()
         config = merge_cnfg(config, config_env)
-        print("Learning new policy...")
         new_policy = PPOPolicyNetwork(config)
         all_scores, average_scores = ppo(env, brain_name, new_policy, config, train=True)
 
@@ -153,16 +156,20 @@ if __name__ == '__main__':
         with open(filename, 'wb') as outfile:
             pickle.dump(dict_results, outfile)
 
-        plt.figure()
+        plt.figure(1)
         plt.plot(all_scores)
         plt.plot(average_scores)
         plt.legend(('current score', 'average 100 epi'))
         plt.xlabel('episode')
         plt.savefig('learning_rates.png')
+        plt.ion()
         plt.show()
+        plt.pause(0.001)
+        time.sleep(5)
         env.close()
 
     if args.pltLrn:
+        print('plotting learning progression VS episode of saved session (results.pckl) ...')
         with open('results.pckl', 'rb') as fid:
             dictRes = pickle.load(fid)
         ff = lambda x, n: signal.filtfilt(np.ones(n), float(n), x)
@@ -170,13 +177,18 @@ if __name__ == '__main__':
         plt.plot(dictRes['all_scores'])
         plt.plot(ff(dictRes['all_scores'], 20))
         plt.legend(('epi score', 'avg 20 epi'))
+        plt.savefig('learning_rates_filtfilt20.png')
+        plt.ion()
         plt.show()
+        plt.pause(0.001)
+        time.sleep(5)
 
     if args.playRound:
+        print('playing a few rounds with saved weights...')
         env, brain, brain_name, config_env = initializeEnv()
         config = merge_cnfg(config, config_env)
         policy = PPOPolicyNetwork(config)
-        policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-512_score38.pth'))
+        policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-512.pth'))
         _, _ = ppo(env, brain_name, policy, config, train=False)
         env.close()
 
@@ -186,3 +198,33 @@ if __name__ == '__main__':
     #     config['hyperparameters']['episode_count']=30
     #     all_scores, average_scores = ppo(env, brain_name, policy, config, train=True)
     #     print("")
+
+    if args.gridSrchHidden and not args.learnNewPolicy:
+        print("Grid Searching hidden size:")
+        print(args.gridSrchHidden)
+        env, brain, brain_name, config_env = initializeEnv()
+        config = merge_cnfg(config, config_env)
+        for hidden_size in args.gridSrchHidden:
+            config['hyperparameters']['hidden_size'] = hidden_size
+            new_policy = PPOPolicyNetwork(config)
+            all_scores, average_scores = ppo(env, brain_name, new_policy, config, train=True)
+
+            dict_results = {'all_scores': all_scores, 'average_scores': average_scores}
+            filename = 'results_hidden' + str(hidden_size) + '_300episodes.pckl'
+            with open(filename, 'wb') as outfile:
+                pickle.dump(dict_results, outfile)
+
+            plt.figure(1)
+            plt.plot(all_scores)
+            plt.plot(average_scores)
+            plt.legend(('current score', 'average 100 epi'))
+            plt.xlabel('episode')
+            plt.savefig('learning_rates_hidden' + str(hidden_size) + '_300episodes.png')
+            plt.ion()
+            plt.show()
+            plt.pause(0.001)
+            time.sleep(5)
+            plt.close(1)
+
+        env.close()
+
