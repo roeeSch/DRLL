@@ -8,9 +8,7 @@ After encountering the paper [Proximal Policy Optimization Algorithms](https://a
 
 
 
-The implementation is based off of [ShangtongZhang](https://github.com/ShangtongZhang) git repository.
-
-The hyper-parameters were basically untouched and met the basis explained in [PPO Hyperparameters and Ranges](https://medium.com/@aureliantactics).
+The implementation is based on [ShangtongZhang](https://github.com/ShangtongZhang/DeepRL) git repository and the hyper-parameters were basically untouched and met the basis explained in [PPO Hyperparameters and Ranges](https://medium.com/@aureliantactics).
 
 Actor-critic network sizes were based on the implementation of  [Jeremi Kaczmarczyk](https://github.com/jknthn/reacher-ppo.git).
 
@@ -18,7 +16,7 @@ Actor-critic network sizes were based on the implementation of  [Jeremi Kaczmarc
 
 Network:
 
-state 33 --> 33 to 512 (FC) --> relu --> 512 to 512 (FC) --> relu --> 512 to 4 (FC) --> tanh
+state 33 --> 33 to NN (FC) --> relu --> <u>NN to NN (FC)</u> --> relu --> NN to 4 (FC) --> tanh
 
 The network yields expected action (ea).
 
@@ -32,13 +30,17 @@ action, log_prob, dist.entropy()
 
 Network:
 
-state 33 --> 33 to 512 (FC) --> relu --> 512 to 512 (FC) --> relu --> 512 to 1 (FC)
+state 33 --> 33 to NN (FC) --> relu --> <u>NN to NN (FC)</u> --> relu --> 512 to 1 (FC)
 
-The network yields a the value of the given state ```v```.
+The network yields a the value of the given state: 
 
+```v```
 
+**<u>NN</u>** - is the hidden layer size. This is the hyper-parameter I chose to study in this project.
 
-<u>PPO implementation:</u>
+ 
+
+**<u>PPO implementation:</u>**
 
 1. Interact with environment for 'rollout_length':
 
@@ -70,11 +72,31 @@ The network yields a the value of the given state ```v```.
 
 The above obtained the following learning performance:
 
-![1562857315785](report_images/learning_rates.png)
+![1562857315785](report_images/hiddSizeEffect.png)
 
 
 
-More Sources:
+In the graph above it is apparent that the biggest affect the hidden layer size has on learning is the reduction of convergence time. It seems that around the size of 96 to 128 hidden nodes, the probability of converging under 150 episodes increases dramatically. Under 64 node learning is slower and learning rate is less predictable.
+
+
+
+<u>**Ideas for future work:**</u>
+
+Since the maximum reward in one game is < 40, I think that future work would focus mainly on simplifying the network further, rather than trying to increase the maximum score.
+
+Some optional directions:
+
+1. Research influences of convergence time:
+   1. An additional hidden layer for actor \ critic. 
+   2. Hyper parameters such as number of mini-batches (mini batch size), learning rate (scheduling)...
+2. In the actor network add 4 more outputs for predicting $\sigma$ of the Gaussian distribution.
+3. Decreasing only the critics network size.
+
+
+
+
+
+<u>**More Sources:**</u>
 
 
 https://arxiv.org/pdf/1506.02438.pdf

@@ -118,7 +118,6 @@ def arg_parse():
             'tau': 0.95,
             'gradient_clip': 5,
             'rollout_length': 2048,
-            # 'optimization_epochs': 10,
             'ppo_clip': 0.2,
             'log_interval': 2048,
             'max_steps': 1e5,
@@ -187,17 +186,11 @@ if __name__ == '__main__':
         print('playing a few rounds with saved weights...')
         env, brain, brain_name, config_env = initializeEnv()
         config = merge_cnfg(config, config_env)
+        config['hyperparameters']['hidden_size'] = 128
         policy = PPOPolicyNetwork(config)
-        policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-512.pth'))
+        policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-128.pth'))
         _, _ = ppo(env, brain_name, policy, config, train=False)
         env.close()
-
-    # if False:
-    #     policy = PPOPolicyNetwork(config)
-    #     policy.load_state_dict(torch.load('reacher-ppo/models/ppo-max-hiddensize-512.pth'))
-    #     config['hyperparameters']['episode_count']=30
-    #     all_scores, average_scores = ppo(env, brain_name, policy, config, train=True)
-    #     print("")
 
     if args.gridSrchHidden and not args.learnNewPolicy:
         print("Grid Searching hidden size:")
@@ -219,7 +212,7 @@ if __name__ == '__main__':
             plt.plot(average_scores)
             plt.legend(('current score', 'average 100 epi'))
             plt.xlabel('episode')
-            plt.savefig('learning_rates_hidden' + str(hidden_size) + '_300episodes.png')
+            plt.savefig('learning_rates_hidden' + str(hidden_size) + '_' + str(config['hyperparameters']['episode_count']) + 'episodes.png')
             plt.ion()
             plt.show()
             plt.pause(0.001)

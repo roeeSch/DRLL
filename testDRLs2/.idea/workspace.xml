@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8333d5bc-2326-4693-a3ff-debb59a65323" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" beforeDir="false" afterPath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_rates.png" beforeDir="false" afterPath="$PROJECT_DIR$/learning_rates.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testDRLs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reacher-ppo/Solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/reacher-ppo/Solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results.pckl" beforeDir="false" afterPath="$PROJECT_DIR$/results.pckl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reacher-ppo/models/ppo-max-hiddensize-512.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reacher-ppo/models/ppo-max-hiddensize-512_score38.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.md" beforeDir="false" afterPath="$PROJECT_DIR$/report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +22,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reacher-ppo/Solution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+            <state relative-caret-position="652">
+              <caret line="214" column="125" selection-start-line="214" selection-start-column="125" selection-end-line="214" selection-end-column="125" />
               <folding>
-                <element signature="e#35#41#0" expanded="true" />
+                <element signature="e#35#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_grid_search_results.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-208">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reacher-ppo/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1753">
-              <caret line="121" column="43" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="43" />
+            <state relative-caret-position="248">
+              <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
               <folding>
                 <element signature="e#449#467#0" expanded="true" />
               </folding>
@@ -115,6 +130,7 @@
         <option value="$PROJECT_DIR$/reacher-ppo/utils.py" />
         <option value="$PROJECT_DIR$/reacher-ppo/agent.py" />
         <option value="$PROJECT_DIR$/reacher-ppo/model.py" />
+        <option value="$PROJECT_DIR$/plot_grid_search_results.py" />
         <option value="$PROJECT_DIR$/reacher-ppo/Solution.py" />
       </list>
     </option>
@@ -131,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,13 +164,18 @@
               <item name="testDRLs2" type="b2602c69:ProjectViewProjectNode" />
               <item name="testDRLs2" type="462c0819:PsiDirectoryNode" />
               <item name="reacher-ppo" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testDRLs2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testDRLs2" type="462c0819:PsiDirectoryNode" />
+              <item name="reacher-ppo" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Solution (gridSrchHidden)">
+  <component name="RunManager" selected="Python.Solution (playRound)">
     <configuration name="Solution (gridSrchHidden)" type="PythonConfigurationType" factoryName="Python">
       <module name="testDRLs2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,7 +207,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reacher-ppo/Solution.py" />
-      <option name="PARAMETERS" value="--gridSrchHidden 64 96 128 160 192 224" />
+      <option name="PARAMETERS" value="--gridSrchHidden 512" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -235,6 +257,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plot_grid_search_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="testDRLs2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_grid_search_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="s2xml" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="testDRLs2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,10 +304,12 @@
       <item itemvalue="Python.Solution (gridSrchHidden)" />
       <item itemvalue="Python.s2xml" />
       <item itemvalue="Python.Solution (playRound)" />
+      <item itemvalue="Python.plot_grid_search_results" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Solution (playRound)" />
+        <item itemvalue="Python.plot_grid_search_results" />
         <item itemvalue="Python.s2xml" />
       </list>
     </recent_temporary>
@@ -292,7 +337,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20796943" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -300,12 +346,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945414" weight="0.35318705" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945414" weight="0.44827586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.50679207" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4597701" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50054586" side_tool="true" weight="0.39916405" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.24660397" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -465,20 +511,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reacher-ppo/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1753">
-          <caret line="121" column="43" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="43" />
+        <state relative-caret-position="248">
+          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
           <folding>
             <element signature="e#449#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_grid_search_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reacher-ppo/Solution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+        <state relative-caret-position="652">
+          <caret line="214" column="125" selection-start-line="214" selection-start-column="125" selection-end-line="214" selection-end-column="125" />
           <folding>
-            <element signature="e#35#41#0" expanded="true" />
+            <element signature="e#35#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
