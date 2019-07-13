@@ -4,10 +4,9 @@
     <list default="true" id="4e7038d1-dbdb-4623-b2a2-8ee61afec900" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" beforeDir="false" afterPath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../testDRLs2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/reacher-ppo/Solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/reacher-ppo/Solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/reacher-ppo/models/ppo-max-hiddensize-512.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/reacher-ppo/models/ppo-max-hiddensize-512_score38.pth" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../testDRLs2/report.md" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testDRLs2/report_images/learning_rates.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testDRLs2/report_images/reacherv1_ppo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/report_images/reacherv1_ppo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/a2c-ppo/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="84" column="28" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="28" />
+            <state relative-caret-position="228">
+              <caret line="69" column="23" lean-forward="true" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -230,9 +229,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -243,7 +241,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291536" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.12330198" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -389,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/a2c-ppo/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="84" column="28" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="28" />
+        <state relative-caret-position="228">
+          <caret line="69" column="23" lean-forward="true" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

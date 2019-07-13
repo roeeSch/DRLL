@@ -1,16 +1,16 @@
-# Project report
+# Continuous Control Project Report
 
 
 
 After encountering the paper [Proximal Policy Optimization Algorithms](https://arxiv.org/pdf/1707.06347.pdf) which shows fast convergence of PPO on reacher environment, I chose to use PPO for solving the reacher environment.
 
-![1562857315785](report_images/reacherv1_ppo.png) 
+![1562857315785](report_images/reacherv1_ppo.png)
+
+​						**Picture taken from  [Proximal Policy Optimization Algorithms](https://arxiv.org/pdf/1707.06347.pdf)**
 
 
 
-The implementation is based on [ShangtongZhang](https://github.com/ShangtongZhang/DeepRL) git repository and the hyper-parameters were basically untouched and met the basis explained in [PPO Hyperparameters and Ranges](https://medium.com/@aureliantactics).
-
-Actor-critic network sizes were based on the implementation of  [Jeremi Kaczmarczyk](https://github.com/jknthn/reacher-ppo.git).
+The implementation is based on [Jeremi Kaczmarczyk](https://github.com/jknthn/reacher-ppo.git) and  [ShangtongZhang](https://github.com/ShangtongZhang/DeepRL) git repository and most of the hyper-parameters were basically untouched and met the basis explained in [PPO Hyperparameters and Ranges](https://medium.com/@aureliantactics).
 
 <u>**Actor:**</u>
 
@@ -40,7 +40,7 @@ The network yields a the value of the given state:
 
  
 
-**<u>PPO implementation:</u>**
+**<u>The implementation:</u>**
 
 1. Interact with environment for 'rollout_length':
 
@@ -70,6 +70,38 @@ The network yields a the value of the given state:
 
 
 
+**<u>My Configuration:</u>**
+
+```python
+config = {
+			'pytorch': {'device': device(type='cuda', index=0)},
+			'hyperparameters': {
+				'discount_rate': 0.99,
+				'tau': 0.95,
+				'gradient_clip': 5,
+				'rollout_length': 2048,
+				'ppo_clip': 0.2,
+				'log_interval': 2048,
+				'max_steps': 100000.0,
+				'mini_batch_number': 32,
+				'entropy_coefficent': 0.01,
+				'episode_count': 150,
+				'hidden_size': None,
+				'adam_learning_rate': 0.0003,
+				'adam_epsilon': 1e-05
+				},
+            'environment': {
+            	'state_size': 33,
+            	'action_size': 4,
+            	'number_of_agents': 20
+            	}
+         }
+```
+
+
+
+
+
 The above obtained the following learning performance:
 
 ![1562857315785](report_images/hiddSizeEffect.png)
@@ -94,9 +126,21 @@ Some optional directions:
 
 
 
+To reproduce the results, install the dependencies as explained in the ```README.md``` file and then run the following commands:
+
+```bash
+$python reacher-ppo/Solution.py --numEpisodes 300 --gridSrchHidden 32 64 96 128 160 192 224 256 288
+```
+```bash
+$python reacher-ppo/Solution.py --numEpisodes 400 --gridSrchHidden 32
+```
+```bash
+$python plot_grid_search_results.py
+```
 
 
-<u>**More Sources:**</u>
+
+<u>**More Resources:**</u>
 
 
 https://arxiv.org/pdf/1506.02438.pdf
