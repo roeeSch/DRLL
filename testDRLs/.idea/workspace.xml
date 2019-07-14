@@ -4,9 +4,6 @@
     <list default="true" id="4e7038d1-dbdb-4623-b2a2-8ee61afec900" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" beforeDir="false" afterPath="$PROJECT_DIR$/../PPO_contControl_proj_single_agent/reacher-ppo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../testDRLs2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/report.md" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/report_images/learning_rates.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testDRLs2/report_images/reacherv1_ppo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../testDRLs2/report_images/reacherv1_ppo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" beforeDir="false" afterPath="$PROJECT_DIR$/../udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
