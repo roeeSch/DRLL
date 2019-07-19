@@ -111,3 +111,8 @@ drlnd/gym/
 drlnd/p1_navigation/Banana_Linux/
 udacityDRL/deep-reinforcement-learning1/p2_continuous-control/ddpgPendulum/
 udacityDRL/deep-reinforcement-learning1/p2_continuous-control/Reacher_Linux/
+
+testDRLs2/.idea/
+/home/roees/DRL course/udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail/
+udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail
+udacityDRL/deep-reinforcement-learning1/p2_continuous-control/pytorch-a2c-ppo-acktr-gail/
